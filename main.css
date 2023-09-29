@@ -101,8 +101,13 @@ ul {
     list-style-type: none;
 }
 
-button {
+.prueba {
     border-radius: 10px;    
+    font-size: 1.4rem;
+    padding: 5px;
+}
+button{
+    border-radius: 10px;  
 }
 .nav {
     display: flex;
@@ -223,7 +228,7 @@ main {
 }
 
 .pokemon-nombre {
-    font-size: 1.4rem;
+    
 }
 
 .pokemon-tipos {
