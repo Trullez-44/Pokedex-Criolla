@@ -6,12 +6,12 @@ const insertHTML =(img, name, id)=>{
                 <p class="pokemon-id-back">${id}</p>
                 <div class="pokemon-imagen">
                     <img src=${img}
-                        alt="Pikachu">
+                        alt="${name }">
                 </div>
                 <div class="pokemon-info">
                     <div class="nombre-contenedor">
                         <p class="pokemon-id">${id}</p>
-                        <h2 class="pokemon-nombre">${name}</h2>
+                        <button class="prueba">${name}</button>
                     </div>
                 </div>
             </div>
