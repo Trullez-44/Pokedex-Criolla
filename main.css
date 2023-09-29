@@ -170,6 +170,9 @@ main {
     isolation: isolate;
     overflow: hidden;
 }
+.pokemon:hover{
+    background-color: var(--grass);
+}
 
 .pokemon-id-back {
     position: absolute;
@@ -190,6 +193,7 @@ main {
 
 .pokemon-imagen img {
     width: 100%;
+    height: 100%;
     max-width: 6rem;
 }
 
