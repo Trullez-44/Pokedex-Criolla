@@ -1,8 +1,11 @@
 let my_button = document.querySelector("#prueba");
+var root = document.documentElement;
+var miVariableCSS = getComputedStyle(root).getPropertyValue('--electric');
+console.log(miVariableCSS);
 const url = "https://pokeapi.co/api/v2/pokemon/";
 my_button.addEventListener("click", async () => {
   let call = await (
-    await fetch(url + "greninja" /*EL ENDPOINT ES EL NOMBRE O ID DEL POKEMON */)
+    await fetch(url + "169  " /*EL ENDPOINT ES EL NOMBRE O ID DEL POKEMON */)
   ).json();
   pokemon_image = call.sprites["front_default"];
   imagen_suplente =
@@ -15,16 +18,23 @@ my_button.addEventListener("click", async () => {
     imageUrl: pokemon_image ? pokemon_image : imagen_suplente,
     imageWidth: "65%",
     imageHeight: "85%",
-    html: `<div id="div_">
+    showConfirmButton: false, 
+    html: `<style>
+    #swal2-title{
+      color:${miVariableCSS}
+    }
+    </style>
+    <form id="div_">
         ${call.stats
           .map((iterador) => {
             return `<div data-name="${iterador.stat.name}"><p class="inputs" data-name="${iterador.stat.name}">
             ${iterador.base_stat} ${iterador.stat.name.toUpperCase()}</p>
-            <input type="range" value="${iterador.base_stat}">
+            <input type="range" max="200" value="${iterador.base_stat}" name="${iterador.stat.name}">
               </div>`;
           })
           .join("")}
-        </div>`,
+        </form>
+        <input type="submit" value="SEND INFO" form="div_">`,
     imageAlt: "Pokemon Image",
   });
   let container = document.querySelector("#div_");
