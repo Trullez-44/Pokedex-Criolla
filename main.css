@@ -29,10 +29,26 @@
     --steel: #b8b8d07e;
     --fairy: #f0b6bc98;
 }
+.swal2-confirm swal2-styled{
+    display: hidden;
+
+}
+input[type="submit"]:hover{
+    transform: scale(2.05);
+    border-radius: 10px;
+}
+input[type="submit"] {
+    border-radius: 10px;
+    margin: 20px auto;
+    transform: scale(2);
+    transition: 500ms;
+    border-radius: 5px;
+    padding: 2px;
+}
 .swal2-image:hover {
     transform: scale(1.3);
    background-color: #ffffff88;
-   border-radius: 5px;
+  
 }
 .swal2-image{
 transition: 1s;
