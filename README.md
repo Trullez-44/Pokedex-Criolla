@@ -2,8 +2,8 @@
 
 
 
-<img src="Screenshot from 2023-09-30 06-26-44.png" >
-<img src="Screenshot from 2023-09-30 06-28-00.png" >
+<img src="./img/img1.png">
+<img src="./img/img2.png">
 # Pokemon POST/PUT
 
 This is the Pokemon API.
