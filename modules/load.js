@@ -22,7 +22,6 @@ export const upload = async(res_data)=>{
         let e = await (await fetch(element.url)).json();
         // console.log(e.sprites.front_default, e.name, e.id);
         let card = insertHTML(e.sprites.front_default, e.name, e.id);
-
         div_cards.innerHTML +=card
     });
 }
