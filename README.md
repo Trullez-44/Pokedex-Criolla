@@ -1,81 +1,24 @@
 # Pokedex-Criolla
-
+This is the Pokemon API.
 
 
 <img src="./img/img1.png">
 <img src="./img/img2.png">
-# Pokemon POST/PUT
 
-This is the Pokemon API.
-Here I use a special method which can send a pokemon to an API that saves it, if this pokemon exists it modifies it.
 
+## Setup and Usage
+1. Clone or download the repository to your local machine.
+2. Open the `index.html` file in a web browser.
+## How To Use?
+To use the page we must click on the Pokemon and see their information
 ## API Reference
++ `pokeApi` :```https://pokeapi.co/api/v2/pokemon```
 
-#### POST pokemones
-
-**Method**: `POST`
-**URL** : `/https://6509d04cf6553137159c10aa.mockapi.io/pokemones`
-
-**Storage** : `pokemonMet.js`
-
-**Module** : `enviarPokemon` 
-
-**Querys** : `(url, data)`
-
-**Auth Required** : `False`
-
-```javascript
-data = {
-    name: "nombre",
-    stats: {
-        hp:12,
-        attack:12,
-        ...
-    }
-}
-  
-```
-
-#### Modify pokemons 
-
-**Method**: `PUT`
-**URL** : `/https://6509d04cf6553137159c10aa.mockapi.io/pokemones`
-
-**Storage** : `pokemonMet.js`
-
-**Module** : `enviarPokemon` 
-
-**Querys** : `(url, data)`
-
-**Auth Required** : `False`
-
-```javascript
-data = {
-    name: "nombre",
-    stats: {
-        hp:12,
-        attack:12,
-        ...
-    }
-}
-```
-
-
-## How To Use
-
-To use the page we must click on the pokemons and see their information
-
-![imgen](./img/Screenshot%20from%202023-09-28%2011-42-00.png)
-
-Range inputs can be modified and will be sent to the mockapi
-
-![imgen](./img/Screenshot%20from%202023-09-28%2011-46-28.png)
-
-To add pokemon statistics to the mockapi what we must do is click on the "Apply" button
-
-![imagen](./img/img-12.png);
-
+## TECHS
++ **HTML5**
++ **CSS3**
++ **JavaScript**
 
 ## Author
-
-- [@johanp0308](https://github.com/johanp0308)
+- **Nombre del Autor**: Kevin
+- **GitHub**: (https://github.com/Trullez-44)
