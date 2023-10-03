@@ -6,6 +6,7 @@ load(upload);
 // console.log(my_button)
 const url = "https://pokeapi.co/api/v2/pokemon/";
 document.addEventListener("click", async (e) => {
+  e.preventDefault();
   if(e.target.matches(`.prueba`)){
     let my_button=e.target
 let call = await (await fetch(url+my_button.textContent/*EL ENDPOINT ES EL NOMBRE O ID DEL POKEMON */)).json();
@@ -23,7 +24,7 @@ Swal.fire({
   html: `
   <form id="div_">
       ${call.stats.map((iterador) => {
-          return `<div data-name="${iterador.stat.name}"><p class="inputs" data-name="${iterador.stat.name}">
+          return `<div data-name="${iterador.stat.name}" class="stats"><p class="inputs" data-name="${iterador.stat.name}">
           ${iterador.base_stat} ${iterador.stat.name.toUpperCase()}</p>
           <input type="range" max="200" value="${iterador.base_stat}" name="${iterador.stat.name}">
             </div>`;
@@ -33,16 +34,16 @@ Swal.fire({
       <input type="submit" value="SEND INFO" form="div_">`,
   imageAlt: "Pokemon Image",
 });
-
-
-let container = document.querySelector("#cards");
-container.addEventListener("click", (e)=>{
-  if(e.target.matches(".prueba")){
+  }
+  let container = document.querySelector("#div_");
+console.log(container);
+container.addEventListener("input",async(e)=>{
+  // console.log('movement'); 
+  if(e.target.matches("input")){
       let mystats =(e.target.parentNode.children[0]);
-      console.log(e.target);
+      // console.log(e.target);
       mystats.innerHTML = ` ${e.target.value} ${mystats.dataset.name.toUpperCase()}`
   }
 })
-  }
 });
 
