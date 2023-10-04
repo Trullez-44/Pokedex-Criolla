@@ -36,6 +36,7 @@
 input[type="submit"]:hover{
     transform: scale(2.05);
     border-radius: 10px;
+   
 }
 input[type="submit"] {
     border-radius: 10px;
@@ -44,6 +45,9 @@ input[type="submit"] {
     transition: 500ms;
     border-radius: 5px;
     padding: 2px;
+    text-align: center;
+position: relative;
+left: 50%;
 }
 .swal2-image:hover {
     transform: scale(1.3);

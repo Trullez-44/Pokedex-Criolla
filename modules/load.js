@@ -1,4 +1,4 @@
-let url = "https://pokeapi.co/api/v2/pokemon"
+let url = "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0"
 let div_cards = document.getElementById('listaPokemon')
 const insertHTML =(img, name, id)=>{
         return  `
@@ -21,12 +21,12 @@ export const upload = async(res_data)=>{
     res_data.results.forEach(async element=> {
         let e = await (await fetch(element.url)).json();
         // console.log(e.sprites.front_default, e.name, e.id);
-        let card = insertHTML(e.sprites.front_default, e.name, e.id);
+        let card = await(insertHTML(e.sprites.front_default, e.name, e.id));
         div_cards.innerHTML +=card
     });
 }
-export const load =async (upload)=>{
+export const load = async (upload)=>{
     let res= await (await fetch(url)).json();
-    upload(res);
+    await (upload(res));
 }
     
